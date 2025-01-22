@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jost.className}`}
+        className={`${jost.className} bg-gray-200 `}
       >
         <Header />
         {children}

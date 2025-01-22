@@ -1,7 +1,9 @@
-
 export default function Footer() {
-    return (
-     <div className="">footer</div>
-    );
-  }
-  
+  return (
+    <footer className="w-screen bg-white">
+      <div className="">
+        
+      </div>
+    </footer>
+  );
+}
