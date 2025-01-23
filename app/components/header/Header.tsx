@@ -12,7 +12,7 @@ import { BlogSubMenu, HomeSubMenu, PagesSubMenu } from "./SubMenu";
 
 export default function Header() {
   return (
-    <header className="bg-white">
+    <header className="">
       <nav className="flex justify-center">
         {/* for mobile size devices */}
         <div className="block lg:hidden md:max-w-[720px] sm:max-w-[540px] px-[0.9rem] sm:px-0 w-full py-[1rem]">
@@ -20,8 +20,8 @@ export default function Header() {
             <div>
               <RiMenu2Line size={28} className="icon" />
             </div>
-            <div>
-              <Image src={logo} className="w-full h-full" alt="UOMO Logo" />
+            <div className="cursor-pointer">
+              <Image src={logo} className="cursor-pointer w-full h-full" alt="UOMO Logo" />
             </div>
             <LiaShoppingBagSolid size={26} className="icon" />
           </ul>

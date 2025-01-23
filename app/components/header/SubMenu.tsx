@@ -18,7 +18,7 @@ export function HomeSubMenu() {
   const columns = groupDataIntoColumns(homeData, 6);
   const [isHovered, setIsHovered] = useState<number | null>(null);
   return (
-    <div className="relative top-7 lg:bg-[#F6F9FB] w-full py-[2.7rem] pr-[6rem] text-[14px] text-black font-normal">
+    <div className="relative top-7 lg:bg-white w-full py-[2.7rem] pr-[6rem] text-[14px] text-black font-normal">
       <div className="grid grid-cols-4 gap-0">
         {columns.map((column, colIndex) => (
           <div key={colIndex} className="space-y-4">
@@ -49,7 +49,7 @@ export function HomeSubMenu() {
 
 // export function ShopSubMenu() {
 //   return (
-//     <div className="relative top-7 lg:bg-[#F6F9FB] w-full py-[2.7rem] pr-[6rem] text-[14px] text-black font-normal min-w-screen flex justify-center">
+//     <div className="relative top-7 lg:bg-white w-full py-[2.7rem] pr-[6rem] text-[14px] text-black font-normal min-w-screen flex justify-center">
 //       <div className="max-w-[1650px] w-full">
 //         <div className="grid grid-cols-4 gap-0">hello</div>
 //       </div>
@@ -60,7 +60,7 @@ export function HomeSubMenu() {
 export function BlogSubMenu() {
     const [isHoveredBlog,setIsHoveredBlog] = useState<number | null>(null);
   return (
-    <div className="relative top-7 lg:bg-[#F6F9FB] w-full pt-[2rem] pb-[1.7rem] pl-[2rem] text-[14px] text-black font-normal">
+    <div className="relative top-7 lg:bg-white w-full pt-[2rem] pb-[1.7rem] pl-[2rem] text-[14px] text-black font-normal">
       <div className="flex flex-col items-start space-y-4">
         {blogData.map((item) => (
           <p
@@ -88,7 +88,7 @@ export function BlogSubMenu() {
 export function PagesSubMenu() {
     const [isHoveredPages,setIsHoveredPages] = useState<number | null>(null);
   return (
-    <div className="relative top-7 lg:bg-[#F6F9FB] w-full pt-[2rem] pb-[1.7rem] pl-[2rem] text-[14px] text-black font-normal">
+    <div className="relative top-7 lg:bg-white w-full pt-[2rem] pb-[1.7rem] pl-[2rem] text-[14px] text-black font-normal">
       <div className="flex flex-col items-start space-y-4">
         {pagesData.map((item) => (
           <p
