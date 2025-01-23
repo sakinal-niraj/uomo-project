@@ -14,7 +14,8 @@ import { useState } from "react";
 // import { UserLogin } from "./Drawers";
 
 export default function Header() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isLoginDrawerOpen, setIsLoginDrawerOpen] = useState(false);
+  const [isShopingBagDrawerOpen, setIsShopingBagDrawerOpen] = useState(false);
   return (
     <header className="">
       <nav className="flex justify-center">
@@ -132,18 +133,18 @@ export default function Header() {
               <FiSearch size={26} className="icon cursor-pointer" />
             </div>
             <div>
-              <span onClick={() => setIsDrawerOpen(true)}>
+              <span onClick={() => setIsLoginDrawerOpen(true)}>
                 <FaRegUser size={22} className="icon cursor-pointer" />
               </span>
-              {isDrawerOpen && (
+              {isLoginDrawerOpen && (
                 <div
                   className="fixed inset-0 bg-gray-500 bg-opacity-50 z-30"
-                  onClick={() => setIsDrawerOpen(false)}
+                  onClick={() => setIsLoginDrawerOpen(false)}
                 ></div>
               )}
               <div
                 className={`fixed top-0 right-0 z-40 h-screen  overflow-y-auto transition-transform bg-white w-[26.5rem] duration-500 ${
-                  isDrawerOpen ? "translate-x-0" : "translate-x-full"
+                  isLoginDrawerOpen ? "translate-x-0" : "translate-x-full"
                 }`}
                 role="dialog"
                 aria-labelledby="drawer-right-label"
@@ -158,7 +159,7 @@ export default function Header() {
                     aria-controls="drawer-right-example"
                     onClick={() => {
                       console.log("Closing drawer");
-                      setIsDrawerOpen(false);
+                      setIsLoginDrawerOpen(false);
                     }}
                   >
                     <IoCloseSharp size={26} />
@@ -232,7 +233,69 @@ export default function Header() {
               <FaRegHeart size={21} className="icon cursor-pointer" />
             </div>
             <div>
-              <LiaShoppingBagSolid size={26} className="icon cursor-pointer" />
+              <span
+                onClick={() => {
+                  setIsShopingBagDrawerOpen(true);
+                }}
+              >
+                <LiaShoppingBagSolid
+                  size={26}
+                  className="icon cursor-pointer"
+                />
+              </span>
+              {isShopingBagDrawerOpen && (
+                <div
+                  className="fixed inset-0 bg-gray-500 bg-opacity-50 z-30"
+                  onClick={() => setIsShopingBagDrawerOpen(false)}
+                ></div>
+              )}
+              <div
+                className={`fixed top-0 right-0 z-40 h-screen  overflow-y-auto transition-transform bg-white w-[26.5rem] duration-500 ${
+                  isShopingBagDrawerOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+                role="dialog"
+                aria-labelledby="drawer-right-label"
+              >
+                {/* head */}
+                <div className="bg-[#faf9f8] w-full flex items-center pt-[1.9rem] pb-[1.5rem] px-[2.5rem] justify-between">
+                  <h5 id="drawer-right-label" className="font-medium">
+                    SHOPPING BAG (0 )
+                  </h5>
+                  <button
+                    type="button"
+                    aria-controls="drawer-right-example"
+                    onClick={() => {
+                      console.log("Closing drawer");
+                      setIsShopingBagDrawerOpen(false);
+                    }}
+                  >
+                    <IoCloseSharp size={26} />
+                  </button>
+                </div>
+
+                {/* body */}
+                <div className="my-[1.875rem] px-[1.3rem]">
+                  {/* no account - create account */}
+                  <div className="w-full mt-12 px-12">
+                    <span className="text-lg text-[#222]">
+                      Your cart is empty. Start shopping!
+                    </span>
+                  </div>
+                </div>
+
+                {/* sub total */}
+                <div className="my-[1.875rem] px-[2.4rem] absolute bottom-0 w-full">
+                  <div className="w-full border-t border-[#d9d9d9] px-1">
+                    <p className="mt-5 text-sm font-medium flex items-center justify-between">
+                      <span>SUBTOTAL:</span>
+                      <span>$0</span>
+                    </p>
+                    <button className="w-full mt-[1.3rem] mb-3 bg-[#e4e4e4] text-[#222222] pt-[0.9375rem] pb-[0.75rem]">
+                      Explore Shop
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <RiMenu2Line size={28} className="icon cursor-pointer" />
