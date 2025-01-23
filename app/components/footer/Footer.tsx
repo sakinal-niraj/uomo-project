@@ -47,7 +47,7 @@ export default function Footer() {
         {/* uomo detalis */}
         <div className="2xl:max-w-[1440px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[0.9rem]">
           <div className="lg:pt-[6.25rem] lg:pb-[4.75rem] md:pt-[3.75rem] md:pb-[2.85rem] pt-[3.125rem] pb-[1.625rem]">
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 pb-9">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 pb-9 space-y-10">
               {/* Address and details */}
               <div className="col-span-2 lg:col-span-1 text-left flex-1">
                 {/* logo */}
@@ -111,7 +111,7 @@ export default function Footer() {
 
               {/* Comapany */}
               <div>
-                <h1 className=" font-medium mb-[2.3rem]">COMPANY</h1>
+                <h1 className=" font-medium mb-5 lg:mb-[2.3rem]">COMPANY</h1>
                 <ul className="space-y-4 text-[#222222]">
                   {comapnyData.map((item) => (
                     <li
@@ -145,7 +145,7 @@ export default function Footer() {
 
               {/* Shop */}
               <div>
-                <h1 className=" font-medium mb-[2.3rem]">SHOP</h1>
+                <h1 className=" font-medium mb-5 lg:mb-[2.3rem]">SHOP</h1>
                 <ul className="space-y-4 text-[#222222]">
                   {shopData.map((item) => (
                     <li
@@ -179,7 +179,7 @@ export default function Footer() {
 
               {/* Help */}
               <div>
-                <h1 className=" font-medium mb-[2.3rem]">HELP</h1>
+                <h1 className=" font-medium mb-5 lg:mb-[2.3rem]">HELP</h1>
                 <ul className="space-y-4 text-[#222222]">
                   {helpData.map((item) => (
                     <li
@@ -213,7 +213,7 @@ export default function Footer() {
 
               {/* Opening time */}
               <div>
-                <h1 className=" font-medium mb-[2.3rem]">OPENING TIME</h1>
+                <h1 className=" font-medium mb-5 lg:mb-[2.3rem]">OPENING TIME</h1>
                 <ul className="space-y-4 text-[#222222]">
                   {openingData.map((item) => (
                     <li className="text-[14px] w-fit" key={item.id}>
