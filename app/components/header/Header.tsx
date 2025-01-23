@@ -21,7 +21,11 @@ export default function Header() {
               <RiMenu2Line size={28} className="icon" />
             </div>
             <div className="cursor-pointer">
-              <Image src={logo} className="cursor-pointer w-full h-full" alt="UOMO Logo" />
+              <Image
+                src={logo}
+                className="cursor-pointer w-full h-full"
+                alt="UOMO Logo"
+              />
             </div>
             <LiaShoppingBagSolid size={26} className="icon" />
           </ul>
@@ -33,7 +37,9 @@ export default function Header() {
           <div className="flex items-center gap-14">
             {/* logo */}
             <div>
-              <Image src={logo} className="w-full h-full" alt="UOMO Logo" />
+              <a href="#">
+                <Image src={logo} className="w-full h-full" alt="UOMO Logo" />
+              </a>
             </div>
 
             {/* Nav links */}

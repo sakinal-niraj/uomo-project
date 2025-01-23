@@ -1,19 +1,12 @@
-export interface HomeData {
+export interface TypeData {
     id: number;
     label: string;
 }
 
-export interface BlogData {
-    id: number;
-    label: string;
-}
-export interface PagesData {
-    id: number;
-    label: string;
-}
+
 
 // home links
-export const homeData: HomeData[] = [
+export const homeData: TypeData[] = [
     { id: 1, label: 'Home1' },
     { id: 2, label: 'Home2' },
     { id: 3, label: 'Home3' },
@@ -43,7 +36,7 @@ export const homeData: HomeData[] = [
 
 
 // blog links 
-export const blogData: BlogData[] = [
+export const blogData: TypeData[] = [
     { id: 1, label: 'Blog V1' },
     { id: 2, label: 'Blog V2' },
     { id: 3, label: 'Blog V3' },
@@ -51,7 +44,7 @@ export const blogData: BlogData[] = [
 ]
 
 
-export const pagesData: PagesData[] = [
+export const pagesData: TypeData[] = [
     { id: 1, label: 'My Account' },
     { id: 2, label: 'Login / Register' },
     { id: 3, label: 'Store Locator' },
