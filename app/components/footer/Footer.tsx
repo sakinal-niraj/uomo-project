@@ -35,7 +35,7 @@ export default function Footer() {
               <input
                 type="text"
                 placeholder="Your email address"
-                className="p-3.5 border-[1px] w-[100%] border-gray-200 text-[14px] text-black"
+                className="p-3.5 border-[1px] w-[100%] border-gray-200 text-[14px] text-black placeholder:text-[#0000008f]"
               />
               <button className="text-sm font-medium text-white bg-[#222222] px-[52px]">
                 JOIN
@@ -217,9 +217,7 @@ export default function Footer() {
                 <ul className="space-y-4 text-[#222222]">
                   {openingData.map((item) => (
                     <li className="text-[14px] w-fit" key={item.id}>
-                      <a href="#">
                         <span className="relative">{item.label}</span>
-                      </a>
                     </li>
                   ))}
                 </ul>
