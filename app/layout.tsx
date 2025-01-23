@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Jost } from '@next/font/google';
+import { Jost } from 'next/font/google';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 

@@ -28,7 +28,7 @@ export default function Header() {
         </div>
 
         {/* from lg size devices */}
-        <div className="hidden  2xl:max-w-[1380px]  xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:flex justify-between pt-[1.5rem] py-[1.5rem]">
+        <div className="hidden 3xl:max-w-[1430px] 3xl:w-full  2xl:max-w-[1380px]  xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:flex justify-between pt-[1.5rem] py-[1.5rem]">
           {/* left side */}
           <div className="flex items-center gap-14">
             {/* logo */}
@@ -118,11 +118,11 @@ export default function Header() {
 
           {/* right side */}
           <div className="flex items-center gap-5 2xl:gap-8">
-            <FiSearch size={26} className="icon" />
-            <FaRegUser size={22} className="icon" />
-            <FaRegHeart size={21} className="icon" />
-            <LiaShoppingBagSolid size={26} className="icon" />
-            <RiMenu2Line size={28} className="icon" />
+            <FiSearch size={26} className="icon cursor-pointer" />
+            <FaRegUser size={22} className="icon cursor-pointer" />
+            <FaRegHeart size={21} className="icon cursor-pointer" />
+            <LiaShoppingBagSolid size={26} className="icon cursor-pointer" />
+            <RiMenu2Line size={28} className="icon cursor-pointer" />
           </div>
         </div>
       </nav>
