@@ -4,7 +4,6 @@ import { Jost } from 'next/font/google';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import BottomBar from "./components/header/BottomBar";
-import DrawerExample from "./components/DrawerExample";
 
 const jost = Jost({
   subsets: ['latin'], // Add other subsets if needed
