@@ -32,12 +32,80 @@ export default function Header() {
                 alt="UOMO Logo"
               />
             </div>
-            <LiaShoppingBagSolid size={26} className="icon" />
+            <div>
+              <span
+                onClick={() => {
+                  setIsShopingBagDrawerOpen(true);
+                }}
+                className="relative"
+              >
+                <LiaShoppingBagSolid
+                  size={26}
+                  className="icon cursor-pointer"
+                />
+                <span className="absolute bg-[#b9a16b] rounded-full text-[10px] p-[0.5px] px-1 text-white -bottom-1 -right-1">
+                  0
+                </span>
+              </span>
+              {isShopingBagDrawerOpen && (
+                <div
+                  className="fixed inset-0 bg-gray-500 bg-opacity-50 z-30"
+                  onClick={() => setIsShopingBagDrawerOpen(false)}
+                ></div>
+              )}
+              <div
+                className={`fixed top-0 right-0 z-40 h-screen  overflow-y-auto transition-transform bg-white w-[full] duration-500 ${
+                  isShopingBagDrawerOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+                role="dialog"
+                aria-labelledby="drawer-right-label"
+              >
+                {/* head */}
+                <div className="bg-[#faf9f8] w-full flex items-center pt-[1.9rem] pb-[1.5rem] px-[1rem] justify-between">
+                  <h5 id="drawer-right-label" className="font-medium">
+                    SHOPPING BAG (0 )
+                  </h5>
+                  <button
+                    type="button"
+                    aria-controls="drawer-right-example"
+                    onClick={() => {
+                      console.log("Closing drawer");
+                      setIsShopingBagDrawerOpen(false);
+                    }}
+                  >
+                    <IoCloseSharp size={26} />
+                  </button>
+                </div>
+
+                {/* body */}
+                <div className="my-[1.875rem] px-[1.5]">
+                  {/* no account - create account */}
+                  <div className="w-full mt-12 px-2">
+                    <span className="text-lg text-[#222]">
+                      Your cart is empty. Start shopping!
+                    </span>
+                  </div>
+                </div>
+
+                {/* sub total */}
+                <div className="my-[1.875rem] px-[2.4rem] absolute bottom-0 w-full">
+                  <div className="w-full border-t border-[#d9d9d9] px-1">
+                    <p className="mt-5 text-sm font-medium flex items-center justify-between">
+                      <span>SUBTOTAL:</span>
+                      <span>$0</span>
+                    </p>
+                    <button className="w-full mt-[1.3rem] mb-3 bg-[#e4e4e4] text-[#222222] pt-[0.9375rem] pb-[0.75rem]">
+                      Explore Shop
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ul>
         </div>
 
         {/* from lg size devices */}
-        <div className="hidden 3xl:max-w-[1430px] 3xl:w-full  2xl:max-w-[1380px]  xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:flex justify-between pt-[1.5rem] py-[1.5rem]">
+        <div className="hidden 3xl:max-w-[1430px] 3xl:w-full  2xl:max-w-[1370px]  xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:flex justify-between pt-[1.5rem] py-[1.5rem]">
           {/* left side */}
           <div className="flex items-center gap-14">
             {/* logo */}
@@ -48,7 +116,7 @@ export default function Header() {
             </div>
 
             {/* Nav links */}
-            <ul className="flex items-center gap-9 2xl:gap-10 ">
+            <ul className="flex items-center gap-9 2xl:gap-[41px] ">
               {/* home link */}
               <li className="relative hover:opacity-100 group cursor-pointer font-medium">
                 <button className={`relative text-[14px] group text-[#c32929]`}>
@@ -130,7 +198,9 @@ export default function Header() {
           {/* right side */}
           <div className="flex items-center gap-5 2xl:gap-8">
             <div>
-              <FiSearch size={26} className="icon cursor-pointer" />
+              <span>
+                <FiSearch size={26} className="icon cursor-pointer" />
+              </span>
             </div>
             <div>
               <span onClick={() => setIsLoginDrawerOpen(true)}>
@@ -237,11 +307,15 @@ export default function Header() {
                 onClick={() => {
                   setIsShopingBagDrawerOpen(true);
                 }}
+                className="relative"
               >
                 <LiaShoppingBagSolid
                   size={26}
                   className="icon cursor-pointer"
                 />
+                <span className="absolute bg-[#b9a16b] rounded-full text-[10px] p-[0.5px] px-1 text-white -bottom-1 -right-1">
+                  0
+                </span>
               </span>
               {isShopingBagDrawerOpen && (
                 <div

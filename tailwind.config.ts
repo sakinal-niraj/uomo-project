@@ -30,6 +30,17 @@ export default {
 
         '3xl': '1600px',
       },
+      container: {
+        center: true, // Optional: centers the container
+        padding: "0.9rem", // Adds default padding
+        screens: {
+          sm: "540px",
+          md: "720px",
+          lg: "960px",
+          xl: "1140px",
+          "2xl": "1440px",
+        },
+      },
     },
   },
   plugins: [],

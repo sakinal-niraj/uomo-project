@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="w-full bg-white">
       <div className="flex items-center flex-col">
         {/* Sign up now */}
-        <div className="2xl:max-w-[1440px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[0.9rem]">
+        <div className="container">
           <div className="max-w-[47rem] m-auto w-full text-center pt-[6.2rem] space-y-5">
             <h1 className="text-[26px] font-medium">
               Sign up now & get 10% off
@@ -35,7 +35,7 @@ export default function Footer() {
               <input
                 type="text"
                 placeholder="Your email address"
-                className="p-3.5 border-[1px] w-[100%] border-gray-200 text-[14px] text-black placeholder:text-[#0000008f]"
+                className="outline-none p-3.5 border-[1px] w-[100%] border-gray-200 text-[14px] text-black placeholder:text-[#0000008f]"
               />
               <button className="text-sm font-medium text-white bg-[#222222] px-[52px]">
                 JOIN
@@ -45,9 +45,9 @@ export default function Footer() {
         </div>
 
         {/* uomo detalis */}
-        <div className="2xl:max-w-[1440px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[0.9rem]">
+        <div className="container">
           <div className="lg:pt-[6.25rem] lg:pb-[4.75rem] md:pt-[3.75rem] md:pb-[2.85rem] pt-[3.125rem] pb-[1.625rem]">
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 pb-9 space-y-10">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 pb-9 space-y-10 lg:space-y-0">
               {/* Address and details */}
               <div className="col-span-2 lg:col-span-1 text-left flex-1">
                 {/* logo */}
