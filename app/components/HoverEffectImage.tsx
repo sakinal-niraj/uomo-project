@@ -13,8 +13,8 @@ const HoverEffectImage: React.FC = () => {
         />
   
         {/* Hover Effect */}
-        <div className="absolute inset-0 opacity-10 bg-white scale-x-0 group-hover:scale-x-100 transform origin-center transition-transform duration-500 ease-in-out" />
-        <div className="absolute inset-0 opacity-10 bg-white scale-y-0 group-hover:scale-y-100 transform origin-center transition-transform duration-500 ease-in-out" />
+        <div className="absolute inset-0 opacity-10 bg-white scale-x-0 group-hover:scale-x-100 transform origin-center transition-transform duration-300 ease-in-out" />
+        <div className="absolute inset-0 opacity-10 bg-white scale-y-0 group-hover:scale-y-100 transform origin-center transition-transform duration-300 ease-in-out" />
       </div>
     );
   };

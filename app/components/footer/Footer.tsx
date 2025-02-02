@@ -46,8 +46,8 @@ export default function Footer() {
 
         {/* uomo detalis */}
         <div className="container">
-          <div className="lg:pt-[6.25rem] lg:pb-[4.75rem] md:pt-[3.75rem] md:pb-[2.85rem] pt-[3.125rem] pb-[1.625rem]">
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 pb-9 space-y-10 lg:space-y-0">
+          <div className="lg:pt-[6.25rem] lg:pb-[4.75rem] md:pt-[3.75rem] md:pb-[2.85rem] pt-[3.125rem] pb-[1.625rem] 3xl:pl-[5.2%]">
+            <div className="grid grid-cols-2 lg:grid-cols-[25%_17%_17%_17%_20%] gap-2 pb-9 space-y-10 lg:space-y-0">
               {/* Address and details */}
               <div className="col-span-2 lg:col-span-1 text-left flex-1">
                 {/* logo */}

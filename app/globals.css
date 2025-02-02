@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* css variables */
 /* :root {
   --container: 2xl:max-w-[1440px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[0.9rem];
@@ -16,5 +17,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-image: url('../public//assets//slider_bg.jpg');
+  background-size: cover;
+  background-position: "center";
 }
+
+
 

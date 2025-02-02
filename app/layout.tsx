@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Jost } from 'next/font/google';
+import { Jost } from "next/font/google";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import BottomBar from "./components/header/BottomBar";
 // import HoverEffectImage from "./components/HoverEffectImage";
 
 const jost = Jost({
-  subsets: ['latin'], // Add other subsets if needed
+  subsets: ["latin"], // Add other subsets if needed
   // weights: [400, 500, 600], // Define the font weights you want to use
 });
-
-
 
 export const metadata: Metadata = {
   title: "Uomo",
@@ -25,16 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jost.className} bg-gray-200 `}
-      >
+      <body className={`${jost.className}`}>
         <Header />
         {children}
         {/* <HoverEffectImage /> */}
         <BottomBar />
         <Footer />
       </body>
-
     </html>
   );
 }

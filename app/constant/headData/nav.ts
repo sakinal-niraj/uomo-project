@@ -54,3 +54,12 @@ export const pagesData: TypeData[] = [
     { id: 7, label: '404 Error' },
     { id: 8, label: 'Coming Soon' },
 ]
+
+
+export const searchData: TypeData[] = [
+    { id: 1, label: 'New Arrivals' },
+    { id: 2, label: 'Dresses' },
+    { id: 3, label: 'Accessories' },
+    { id: 4, label: 'Footwear' },
+    { id: 5, label: 'Sweatshirt' },
+]

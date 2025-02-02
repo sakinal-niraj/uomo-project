@@ -8,13 +8,16 @@ import { FaRegHeart } from "react-icons/fa";
 import { RiMenu2Line } from "react-icons/ri";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoCloseSharp } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 import { BlogSubMenu, HomeSubMenu, PagesSubMenu } from "./SubMenu";
 import { useState } from "react";
+import { searchData } from "@/app/constant/headData/nav";
 // import { UserLogin } from "./Drawers";
 
 export default function Header() {
   const [isLoginDrawerOpen, setIsLoginDrawerOpen] = useState(false);
+  const [isSerachDrawerOpen, setIsSearchDrawerOpen] = useState(false);
   const [isShopingBagDrawerOpen, setIsShopingBagDrawerOpen] = useState(false);
   return (
     <header className="">
@@ -198,9 +201,58 @@ export default function Header() {
           {/* right side */}
           <div className="flex items-center gap-5 2xl:gap-8">
             <div>
-              <span>
-                <FiSearch size={26} className="icon cursor-pointer" />
+              <span
+                onClick={() => {
+                  setIsSearchDrawerOpen(!isSerachDrawerOpen);
+                }}
+              >
+                {isSerachDrawerOpen ? (
+                  <IoMdClose size={26} className="icon cursor-pointer" />
+                ) : (
+                  <FiSearch size={26} className="icon cursor-pointer" />
+                )}
               </span>
+              {isSerachDrawerOpen && (
+                <div
+                  className="fixed inset-0 z-10 transition-transform ease-out duration-300"
+                  onClick={() => setIsSearchDrawerOpen(false)}
+                ></div>
+              )}
+
+              <div
+                className={`flex justify-center fixed top-[78px] left-0 right-0 z-40 h-auto overflow-y-auto transition-transform bg-white duration-200 w-full
+                ${isSerachDrawerOpen ? "block" : "hidden"} `}
+              >
+                <div className="my-9 bg-white 3xl:max-w-[1430px] 3xl:w-full  2xl:max-w-[1410px]  xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:flex justify-between pt-[1.5rem] py-[1.5rem]">
+                  <div className="w-full flex flex-col items-start space-y-6">
+                    <h1 className="text-[#767676] uppercase font-semibold text-sm">
+                      What are you looking for?
+                    </h1>
+                    <div className="w-full relative">
+                      <input
+                        type="text"
+                        placeholder="Search products"
+                        className="w-full border-0 outline-none border-b p-0.5 pb-3 text-sm font-semibold border-black"
+                      />
+                      <FiSearch
+                        size={26}
+                        className="icon cursor-pointer text-[#767676] absolute right-0 bottom-2"
+                      />
+                    </div>
+                    <div className="pt-1 space-y-4 pb-0.5">
+                      <h2 className="uppercase text-sm font-semibold text-[#767676]">Quicklinks</h2>
+                      <ul className="space-y-4 text-sm text-[#222222] opacity-80 font-medium">
+                        {searchData.map((item)=>(
+                          <li key={item.id} className="relative group cursor-pointer">
+                            {item.label}
+                          <span className="absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-500 group-hover:w-7 w-0"></span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <span onClick={() => setIsLoginDrawerOpen(true)}>
@@ -208,7 +260,7 @@ export default function Header() {
               </span>
               {isLoginDrawerOpen && (
                 <div
-                  className="fixed inset-0 bg-gray-500 bg-opacity-50 z-30"
+                  className="fixed inset-0 bg-gray-500 bg-opacity-50 z-30  transition-all ease-out duration-300"
                   onClick={() => setIsLoginDrawerOpen(false)}
                 ></div>
               )}
